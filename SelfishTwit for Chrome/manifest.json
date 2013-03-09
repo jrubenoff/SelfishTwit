@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "SelfishTwit",
+  "description": "A Twitter stylesheet for antisocial news junkies.",
+  "version": "0.1",
+  "homepage_url": "http://jrubenoff.com/selfishtwit",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "css": ["selfishtwit.css"]
+    }
+  ]
+}

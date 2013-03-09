@@ -1,0 +1,128 @@
+/*  ------------------------
+	
+	SelfishTwit 1.0
+	A Twitter Userstyle for Antisocial News Junkies
+
+	------------------------ */
+
+/* Typeface. */
+
+.tweet {
+	font-family: Merriweather, Georgia, Baskerville, Times New Roman, serif;
+}
+
+/* Font size. */
+
+p a,
+a .invisible,
+.tweet:hover p {
+	font-size: 14px !important;
+	line-height: 1.5em !important;
+}
+
+/* Background colors. */
+
+body,
+.wrapper,
+.js-stream-item,
+.tweet:hover {
+	background: #fff !important;
+}
+
+/* Containers. */
+
+.wrapper {
+	width: auto !important;
+	padding: 0;
+	margin: 1.5em auto;
+}
+
+.content-main {
+	margin: 0 auto;
+	float: none !important;
+	width: 90% !important;
+}
+
+/* Hide UI elements. */
+
+.twitter-atreply,
+.twitter-hashtag,
+.content-main > div:not(.stream-container),
+.content-main h2 {
+	display: none;
+}
+
+.dashboard,
+li.people,
+li.profile,
+.me,
+.close-all-tweets,
+.topbar-divider,
+.cards-media-container,
+.stream-item-header,
+.stream-item-footer,
+.replies,
+.expanded-content,
+.topbar-tweet-btn,
+.profile-card {
+	display: none !important;
+}
+
+.content-main > div#discover_items {
+	display: block !important;
+}
+
+.js-stream-item {
+	margin: 0 !important;
+}
+
+.content-main div,
+.content-main li {
+	border: 0 !important;
+}
+
+p {
+	color: #fff;
+	font-size: 0;
+	line-height: 0;
+	width: 100%;
+}
+
+.tweet {
+	min-height: 0 !important;
+	height: auto !important;
+	padding: 0 !important;
+	line-height: auto !important;
+	visibility: hidden;
+}
+
+/* Show all links on the page by default. */
+
+p a {
+	display: block;
+	visibility: visible !important;
+	margin: 6px 0;
+}
+
+/* Hide ellipses for links. */
+
+a .tco-ellipsis {
+	display: none;
+}
+
+/* Display the full tweet on hover. */
+
+.tweet:hover,
+.tweet:hover p {
+	visibility: visible !important;
+}
+
+.tweet:hover .twitter-atreply,
+.tweet:hover .twitter-hashtag {
+	display: inline;
+}
+
+.tweet:hover p {
+	color: #000;
+	padding: 1em 0;
+}
