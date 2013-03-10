@@ -7,9 +7,14 @@
 
 /* Typeface. */
 
+@font-face {
+    font-family: 'Merriweather';
+    src:  url('Merriweather.ttf') format('truetype');
+}
+
 .tweet,
 .new-tweets-bar {
-	font-family: Merriweather, Georgia, Baskerville, Times New Roman, serif;
+	font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif;
 }
 
 /* Font size. */
@@ -103,6 +108,7 @@ p a {
 	display: block;
 	visibility: visible !important;
 	margin: 6px 0;
+	color: #0090d3 !important;
 }
 
 /* Hide ellipses for links. */

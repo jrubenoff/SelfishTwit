@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "SelfishTwit",
-  "description": "A Twitter stylesheet for antisocial news junkies.",
-  "version": "0.1",
+  "description": "A Twitter userstyle for antisocial news junkies.",
+  "version": "1.0",
   "homepage_url": "http://jrubenoff.com/selfishtwit",
 
   "content_scripts": [
@@ -11,5 +11,11 @@
       "matches": ["*://*.twitter.com/*"],
       "css": ["selfishtwit.css"]
     }
-  ]
+  ],
+  "web_accessible_resources": [
+  	"Merriweather.ttf"
+  ],
+  "icons": { "48": "icon48.png",
+   "128": "icon128.png"
+  }
 }

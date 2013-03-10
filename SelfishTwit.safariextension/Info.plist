@@ -45,6 +45,8 @@
 			<string>Some</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://www.jrubenoff.com/selfishtwit/safari.plist</string>
 	<key>Website</key>
 	<string>http://www.jrubenoff.com/selfishtwit</string>
 </dict>

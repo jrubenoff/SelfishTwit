@@ -103,6 +103,7 @@ p a {
 	display: block;
 	visibility: visible !important;
 	margin: 6px 0;
+	color: #0090d3 !important;
 }
 
 /* Hide ellipses for links. */
