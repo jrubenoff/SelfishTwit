@@ -3,7 +3,7 @@
 
   "name": "SelfishTwit",
   "description": "A Twitter userstyle for antisocial news junkies.",
-  "version": "1.0",
+  "version": "1.1",
   "homepage_url": "http://jrubenoff.com/selfishtwit",
 
   "content_scripts": [

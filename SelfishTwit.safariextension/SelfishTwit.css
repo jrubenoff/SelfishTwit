@@ -175,8 +175,8 @@ p {
 	text-align: center !important;
 }
 
-i.follow {
-	display: none;
+.follow {
+	display: none !important;
 }
 
 /* Show all links on the page by default. */
