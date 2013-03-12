@@ -119,7 +119,8 @@ p {
 .stats,
 .profile-picture,
 .location-and-url,
-.user-dropdown {
+.user-dropdown,
+.follow-status {
 	display: none !important;
 }
 
