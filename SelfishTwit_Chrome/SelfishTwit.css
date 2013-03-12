@@ -13,7 +13,9 @@
 }
 
 .tweet,
-.new-tweets-bar {
+.new-tweets-bar,
+.profile-header-inner,
+.button-text {
 	font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif;
 }
 
@@ -70,7 +72,10 @@ li.profile,
 .replies,
 .expanded-content,
 .topbar-tweet-btn,
-.profile-card {
+#suggested-users,
+.dm-button,
+.edit-profile-btn,
+.verified-link {
 	display: none !important;
 }
 
@@ -100,6 +105,77 @@ p {
 	padding: 0 !important;
 	line-height: auto !important;
 	visibility: hidden;
+}
+
+/* Showing @username and Follow button in page header */
+
+.profile-header {
+	float: none !important;
+	margin: 0 auto !important;
+	width: 100%;
+}
+
+.profile-header-inner-overlay,
+.stats,
+.profile-picture,
+.location-and-url,
+.user-dropdown {
+	display: none !important;
+}
+
+.module {
+	border: 0 !important;
+}
+
+.profile-header-inner {
+	background: none !important;
+	height: 42px !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.profile-card-inner span,
+.profile-card-inner s {
+	text-shadow: none !important;
+	font-size: 23px;
+	line-height: 42px !important;
+}
+
+.profile-card-inner h1,
+.profile-card-inner h2 {
+	display: inline !important;
+}
+
+.profile-card-inner h1 {
+	color: #444 !important;
+}
+
+.profile-card-inner h2 span,
+.profile-card-inner h2 s {
+	color: #888 !important;
+}
+
+.user-actions {
+	float: none !important;
+	margin: 6px 0 !important;
+	text-align: center;
+}
+
+.btn {
+	background: none !important;
+	border-color: #888 !important;
+}
+
+.button-text {
+	color: #444;
+	text-shadow: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+	text-align: center !important;
+}
+
+i.follow {
+	display: none;
 }
 
 /* Show all links on the page by default. */
@@ -143,4 +219,17 @@ a .tco-ellipsis {
     -moz-border-radius: 4px;
     border-radius: 4px;
     text-transform: uppercase;
+}
+
+/* Restyling indicator for end of tweet list */
+
+i.bird-etched {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #f7f7f7 !important;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+
 }
