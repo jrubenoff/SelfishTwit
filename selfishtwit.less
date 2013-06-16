@@ -1,0 +1,480 @@
+/*  ------------------------
+	
+	SelfishTwit
+	A Twitter Userstyle for Antisocial News Junkies
+
+	------------------------ */
+
+// Variables
+
+@blue: #0090d3;
+
+// Mixins
+
+.font-stack(@font: serif) {
+	font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, @font !important;
+}
+
+.border-radius(...) {
+	-webkit-border-radius: @arguments;
+	border-radius: @arguments;
+}
+
+.box-shadow(...) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+.transition(...) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+
+.header(@font-size: 23px;) {
+	text-shadow: none !important;
+	font-size: @font-size;
+	line-height: 42px !important;
+}
+
+/* Typeface. */
+
+@font-face {
+    font-family: 'Merriweather';
+    src:  url('chrome-extension://jkfgkejglneghjhedgcnbdoakpngbhhn/Merriweather.ttf') format('truetype');
+}
+
+.tweet,
+.new-tweets-bar,
+.profile-header-inner,
+.button-text,
+.back-to-top,
+.view-profile {
+	.font-stack;
+}
+
+/* Font size. */
+
+#doc p a,
+a .invisible,
+.stream-item:hover p {
+	font-size: 14px !important;
+	line-height: 1.5em !important;
+}
+
+/* Background colors. */
+
+body,
+.wrapper,
+.js-stream-item {
+	background: #fff !important;
+}
+
+.tweet {
+	background: transparent !important;
+}
+
+/* Containers. */
+
+.wrapper {
+	width: auto !important;
+	margin: 1.5em auto;
+}
+
+.content-main {
+	margin: 0 auto;
+	float: none !important;
+	width: 100% !important;
+}
+
+.wrapper,
+.wrapper-narrow,
+.wrapper-permalink {
+	padding: 54px 0 15px !important;
+}
+
+.stream-item-header,
+.tweet-text {
+	max-width: 910px;
+	margin: 0 auto;
+}
+
+/* Banner styling */
+
+#global-actions {
+	a,
+	a:focus,
+	a:hover,
+	a:active {
+		color: #aaa !important;
+		text-shadow: 0 1px 1px #fff !important;
+		font-weight: 300;
+	}
+	.active a,
+	.active a:focus,
+	.active a:hover,
+	.active a:active {
+		background: #eee !important;
+		.box-shadow(~"none !important");
+	}
+}
+
+#search-query {
+	background: #fff !important;
+	.font-stack;
+}
+
+.global-nav {
+	background: #fafafa !important;
+	.font-stack;
+	font-weight: normal;
+	.search-input, .search-input:focus, .search-input.focus {
+		.box-shadow(~"inset 0 1px 2px" fade(#000,20%) ~" !important");
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.nav>li>a {
+	padding: 14px;
+}
+
+.dropdown-menu {
+	li>a:hover,
+	li>a:focus,
+	.dropdown-link:hover,
+	.dropdown-link:focus,
+	.typeahead-recent-search-item.selected,
+	.selected a,
+	.dropdown-link.selected {
+		background: #0090d3 !important;
+		.avatar {
+			opacity: 1;
+		}
+	}
+}
+
+
+/* Hide UI elements. */
+
+.twitter-atreply,
+.twitter-hashtag,
+.content-main > div:not(.stream-container),
+.content-main h2,
+.account-group {
+	display: none;
+}
+
+.global-nav h1,
+.global-nav .new-wrapper,
+.dashboard,
+.pushstate-spinner,
+li.people,
+li.profile,
+.me,
+.close-all-tweets,
+.topbar-divider,
+.cards-media-container,
+.stream-item-header .time,
+.stream-item-header .username,
+.stream-item-footer,
+.replies,
+.expanded-content,
+.topbar-tweet-btn,
+#suggested-users,
+.dm-button,
+.edit-profile-btn,
+.verified-link,
+.promoted-tweet,
+.follow-bar,
+.modal-header,
+.modal-close,
+.expanded-conversation li:not(.original-tweet-container),
+.inline-reply-tweetbox,
+.dropdown-signin,
+.profile-header-inner-overlay,
+.stats,
+.profile-picture,
+.location-and-url,
+.user-dropdown,
+.follow-status,
+.bio-container {
+	display: none !important;
+}
+
+.stream-item {
+	margin: 0 !important;
+}
+
+.content-main {
+	div, li {
+		border: 0 !important;
+	}
+	& > div#discover_items {
+		display: block !important;
+	}
+}
+
+p,
+.modal-body p {
+	color: #fff !important;
+	font-size: 0;
+	line-height: 0;
+	width: 100%;
+	.transition(height 0.35s ease-out);
+}
+
+.modal-body div {
+	border: 0 !important;
+}
+
+.tweet {
+	min-height: 0 !important;
+	height: auto !important;
+	padding: 0 !important;
+	line-height: auto !important;
+	width: 90%;
+	margin-left: 5%;
+	background: transparent;
+	border: 0 !important;
+	&.tweet-inverted {
+		padding: 1em 0 !important;
+		background: fade(#000,50%);
+		margin-left: 0;
+	}
+}
+
+#profile_popup .recent-tweets {
+	margin-top: 0.5rem;
+}
+
+
+/* Showing @username and Follow button in page header,  */
+
+.profile-header {
+	float: none !important;
+	margin: 0 auto !important;
+	width: 100%;
+}
+
+.modal .bio-container {
+	display: block !important;
+}
+
+.module {
+	border: 0 !important;
+}
+
+.profile-header-inner {
+	background: none !important;
+	height: 42px !important;
+	.box-shadow(~"none !important");
+}
+
+.modal .profile-header-inner {
+	height: auto !important;
+	p.bio.profile-field {
+		font-size: 12px;
+		color: #888 !important;
+		text-shadow: none !important;
+		line-height: 18px;
+		a.twitter-atreply, a.twitter-hashtag {
+			display: inline !important;
+			line-height: 18px !important;
+			span, s, b {
+				color: @blue !important;
+				font-size: 12px !important;
+				line-height: 18px !important;
+			}
+
+		}
+	}
+}
+
+.profile-card-inner {
+	span, s, a {
+		.header;
+	}
+	h1, h2 {
+		display: inline !important;
+	}
+	h1 {
+		span, a {
+			color: #444 !important;
+		}
+	}
+	h2 {
+		span, s {
+			color: #888 !important;
+		}
+	}
+}
+
+.js-list-name {
+	.header;
+}
+
+.user-actions {
+	float: none !important;
+	margin: 6px 0 !important;
+	text-align: center;
+}
+
+.btn {
+	background: none !important;
+	border-color: #888 !important;
+}
+
+.button-text {
+	color: #444;
+	text-shadow: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+	text-align: center !important;
+}
+
+i.follow {
+	display: none;
+}
+
+/* Profile Cards */
+
+.view-profile {
+    height:  3em !important;
+    line-height: 3em !important;
+    padding: 0 !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+.modal-body .profile-card {
+    margin-top:  1.5em !important;
+}
+
+/* Show all links on the page by default. */
+
+p a {
+	display: block;
+	margin: 6px 0;
+	color:  @blue !important;
+	opacity: 1 !important;
+}
+
+/* Hide ellipses for links. */
+
+a .tco-ellipsis {
+	display: none;
+}
+
+/* Display the full tweet on hover. */
+
+.stream-item:hover {
+	background: #fafafa !important;
+	border-top: 1px solid fade(#000,15%) !important;
+	border-bottom: 1px solid fade(#000,15%) !important;
+	padding: 1em 0;
+	.twitter-atreply,
+	.twitter-hashtag {
+		display: inline;
+	}
+	.account-group {
+		display: block;
+	}
+	.tweet p {
+		color: #444 !important;
+	}
+}
+
+.avatar {
+	-webkit-filter: grayscale(0.5);
+	opacity: 0.3;
+	.transition(opacity 0.1s ease-out);
+}
+
+/* New Tweets bar */
+
+.new-tweets-bar {
+    width:  20%;
+    margin-left:  40%;
+    .border-radius(4px);
+    text-transform: uppercase;
+}
+
+/* Restyling indicator for end of tweet list */
+
+i.bird-etched {
+	width: 16px;
+	height: 16px;
+	.border-radius(50%);
+	background: #f7f7f7 !important;
+	.box-shadow(inset 0 0 6px fade(#000,25%));
+}
+
+.back-to-top {
+	font-size: 11px !important;
+	color: #aaa !important;
+	-webkit-font-smoothing: antialiased;
+}
+
+.back-to-top,
+.view-profile {
+    text-transform: capitalize;
+}
+
+/* Sign In page */
+
+.nav-logo-link, 
+.language-dropdown,
+.front-bg img {
+    display: none !important;
+}
+
+.front-bg {
+    background: #fff !important;
+}
+
+.front-welcome-text h1 {
+    .font-stack;
+    color: #888 !important;
+    text-shadow: none;
+    text-align: center;
+}
+
+.front-welcome {
+    width: 100%;
+    display: block;
+    clear: left;
+    position: relative;
+}
+
+.front-signin, .front-signup {
+    background: #fafafa !important;
+    .font-stack;
+}
+
+.btn {
+	background: #fff !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
+.btn, label {
+	.font-stack;
+}
+
+.page-canvas, .content-narrow {
+	border: 0 !important;
+	.font-stack;
+	input {
+		.font-stack;
+	}
+}
+
+#apps-stream {
+	display: block !important;
+	.content p, .content span {
+		display: none;
+	}
+	.stream-item:hover {
+		padding: 0;
+	}
+}
