@@ -1,17 +1,19 @@
 ### SelfishTwit
 #### A Twitter userstyle for antisocial news junkies
 
-Do you find yourself only reading Twitter for the links?
+Do you find yourself only reading Twitter for the links? Well, you're in luck. SelfishTwit lets you bypass all of that pesky humanity to get to those sweet, sweet #thinkpieces and #content.
 
-SelfishTwit is a userstyle for Twitter's timeline and list pages. **It only shows you links.** You cannot tweet or read your @replies. There are no Twitter Cards, favorite buttons or follower counts. Any tweets which don't contain links are automatically hidden. SelfishTwit lets you bypass all of that pesky human sentiment to get to those sweet, sweet #thinkpieces and #content.
+#### What is it?
 
-While Twitter.com truncates external links within your timeline, SelfishTwit shows you the full URL. This helps you bypass links from sites you don't care to visit. Many CMSes also include their blog post's full title in a URL slug, so SelfishTwit also sort of works as a garbled headline scanner.
+SelfishTwit is a userstyle for Twitter's timeline and list pages. **It only shows you links.** You can't tweet or read your @replies. There are no Twitter Cards, favorite buttons or follower counts.
 
-Hovering over a link in SelfishTwit shows you the full tweet, for additional context.
 
-### Getting started
+Any tweets which don't contain links are automatically hidden. While Twitter.com truncates external links within your timeline, SelfishTwit shows you the full URL. Hovering over a link in SelfishTwit shows you the full tweet for additional context, which helps when looking at shortened URLs.
 
-You can use SelfishTwit in conjunction with Stylish for [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Safari](http://sobolev.us/stylish/), and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/).
+
+### How do I get started?
+
+You can add SelfishTwit as a userstyle Stylish for [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Safari](http://sobolev.us/stylish/), or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/).
 
 Cut and paste `selfishtwit.css` into the Stylish settings to get started. Make sure to restrict the domain to `twitter.com`.
 
@@ -27,6 +29,6 @@ In many cases, SelfishTwit hides multiple pages worth of linkless tweets from yo
 
 There's an easy fix for this: make your window comically short, so that there's room for you to scroll down.
 
-![Loading new links.](http://imgur.com/NHBWDv1)
+![Loading new links.](http://i.imgur.com/NHBWDv1.png)
 
 When new links have loaded, you can restore the window to its normal size.
