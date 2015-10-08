@@ -1,10 +1,10 @@
 ### Do you find yourself only reading Twitter for the links?
 
-Well, you're in luck. SelfishTwit lets you bypass all of that pesky humanity to get to those sweet, sweet #thinkpieces and #content.
+Well, you're in luck. SelfishTwit lets you bypass all of that pesky humanity to get to that sweet, sweet #content.
 
 ![SelfishTwit screenshot.](http://i.imgur.com/RtOuGiR.png)
 
-#### What is it?
+### What is it?
 
 SelfishTwit is a userstyle for Twitter's timeline and list pages. **It only shows you links.** You can't tweet or read your @replies. There are no Twitter Cards, favorite buttons or follower counts.
 
