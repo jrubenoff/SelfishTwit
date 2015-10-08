@@ -1,7 +1,8 @@
-### SelfishTwit
-#### A Twitter userstyle for antisocial news junkies
+### Do you find yourself only reading Twitter for the links?
 
-Do you find yourself only reading Twitter for the links? Well, you're in luck. SelfishTwit lets you bypass all of that pesky humanity to get to those sweet, sweet #thinkpieces and #content.
+Well, you're in luck. SelfishTwit lets you bypass all of that pesky humanity to get to those sweet, sweet #thinkpieces and #content.
+
+![SelfishTwit screenshot.](http://i.imgur.com/RtOuGiR.png)
 
 #### What is it?
 
