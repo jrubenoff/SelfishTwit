@@ -1,122 +1,84 @@
 /*  ------------------------
-	
-	SelfishTwit
-	A Twitter Userstyle for Antisocial News Junkies
+  
+  SelfishTwit
+  A Twitter Userstyle for Antisocial News Junkies
 
-	------------------------ */
-/* Typeface. */
-@font-face {
-  font-family: 'Merriweather';
-  src: url('chrome-extension://jkfgkejglneghjhedgcnbdoakpngbhhn/Merriweather.ttf') format('truetype');
+  ------------------------ */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 .tweet,
 .new-tweets-bar,
 .profile-header-inner,
 .button-text,
 .back-to-top,
 .view-profile {
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
 }
+
 /* Font size. */
 #doc p a,
 a .invisible,
 .stream-item:hover p {
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 1.5em !important;
 }
+
 /* Background colors. */
+
 body,
 .wrapper,
 .js-stream-item {
   background: #fff !important;
 }
+
 .tweet {
   background: transparent !important;
 }
+
 /* Containers. */
+
 .wrapper {
   width: auto !important;
-  margin: 1.5em auto;
+  margin: 0 auto 1.5em;
 }
+
+.wrapper,
+.wrapper-narrow,
+.wrapper-permalink {
+  padding: 1rem 0 !important;
+}
+
 .content-main {
   margin: 0 auto;
   float: none !important;
   width: 100% !important;
 }
-.wrapper,
-.wrapper-narrow,
-.wrapper-permalink {
-  padding: 54px 0 15px !important;
-}
+
 .stream-item-header,
 .tweet-text {
-  max-width: 910px;
+  max-width: 40rem;
   margin: 0 auto;
 }
-/* Banner styling */
-#global-actions a,
-#global-actions a:focus,
-#global-actions a:hover,
-#global-actions a:active {
-  color: #aaa !important;
-  text-shadow: 0 1px 1px #fff !important;
-  font-weight: 300;
-}
-#global-actions .active a,
-#global-actions .active a:focus,
-#global-actions .active a:hover,
-#global-actions .active a:active {
-  background: #eee !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-}
-#search-query {
-  background: #fff !important;
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
-}
-.global-nav {
-  background: #fafafa !important;
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
-  font-weight: normal;
-}
-.global-nav .search-input,
-.global-nav .search-input:focus,
-.global-nav .search-input.focus {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)  !important;
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)  !important;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)  !important;
-  -webkit-font-smoothing: antialiased;
-}
-.nav > li > a {
-  padding: 14px;
-}
-.dropdown-menu li > a:hover,
-.dropdown-menu li > a:focus,
-.dropdown-menu .dropdown-link:hover,
-.dropdown-menu .dropdown-link:focus,
-.dropdown-menu .typeahead-recent-search-item.selected,
-.dropdown-menu .selected a,
-.dropdown-menu .dropdown-link.selected {
-  background: #0090d3 !important;
-}
-.dropdown-menu li > a:hover .avatar,
-.dropdown-menu li > a:focus .avatar,
-.dropdown-menu .dropdown-link:hover .avatar,
-.dropdown-menu .dropdown-link:focus .avatar,
-.dropdown-menu .typeahead-recent-search-item.selected .avatar,
-.dropdown-menu .selected a .avatar,
-.dropdown-menu .dropdown-link.selected .avatar {
-  opacity: 1;
-}
+
 /* Hide UI elements. */
 .twitter-atreply,
 .twitter-hashtag,
 .content-main > div:not(.stream-container),
 .content-main h2,
-.account-group {
+.account-group,
+.context,
+.missing-tweets-bar,
+.tweet.has-native-media {
   display: none;
 }
+
+.global-nav,
+.media-tagging-block,
+.PromptbirdPrompt,
 .global-nav h1,
 .global-nav .new-wrapper,
 .dashboard,
@@ -149,25 +111,71 @@ li.profile,
 .profile-picture,
 .location-and-url,
 .user-dropdown,
+.nav > li .Icon,
 .follow-status,
-.bio-container {
+.bio-container,
+.conversation-module > li:after,
+.conversation-module > li:before,
+.translate-button,
+.conversation-header,
+.ProfileTweet-actionButton,
+.QuoteTweet-mediaContainer,
+.QuoteTweet .ProfileTweet-originalAuthor,
+.QuoteTweet img,
+.QuoteTweet-authorAndText,
+.form-search,
+.dm-nav,
+#profile-hover-container,
+.stream-item iframe {
   display: none !important;
 }
+
+.QuoteTweet {
+  margin: 0 !important;
+  font-size: 0 !important;
+}
+
+.QuoteTweet--unavailable {
+  display: none;
+}
+
+.stream-item:hover .QuoteTweet--unavailable {
+  display: block;
+}
+
+.stream-item:hover .QuoteTweet {
+    margin: 6px 0 !important;
+    opacity: 1;
+    font-size: inherit !important;
+}
+
+.js-media-container > div {
+  min-height: 0 !important;
+}
+
+.QuoteTweet-text,
+.QuoteTweet-innerContainer {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .stream-item {
   margin: 0 !important;
 }
+
 .content-main div,
 .content-main li {
   border: 0 !important;
 }
-.content-main > div#discover_items {
+.content-main > div#discover_items,
+.stream-item:hover iframe {
   display: block !important;
 }
 p,
 .modal-body p {
   color: #fff !important;
-  font-size: 0;
-  line-height: 0;
+  font-size: 0 !important;
+  line-height: 0 !important;
   width: 100%;
   -webkit-transition: height 0.35s ease-out;
   -moz-transition: height 0.35s ease-out;
@@ -181,7 +189,7 @@ p,
   min-height: 0 !important;
   height: auto !important;
   padding: 0 !important;
-  line-height: auto !important;
+  line-height: inherit !important;
   width: 90%;
   margin-left: 5%;
   background: transparent;
@@ -192,9 +200,13 @@ p,
   background: rgba(0, 0, 0, 0.5);
   margin-left: 0;
 }
+.tweet .js-tweet-text {
+  white-space: normal !important;
+}
 #profile_popup .recent-tweets {
   margin-top: 0.5rem;
 }
+
 /* Showing @username and Follow button in page header,  */
 .profile-header {
   float: none !important;
@@ -308,16 +320,27 @@ a .tco-ellipsis {
   border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
   padding: 1em 0;
+  /* Properly displaying conversations stemmed off links. */
 }
 .stream-item:hover .twitter-atreply,
 .stream-item:hover .twitter-hashtag {
   display: inline;
 }
-.stream-item:hover .account-group {
+.stream-item:hover .account-group,
+.stream-item:hover .account-group{
   display: block;
 }
 .stream-item:hover .tweet p {
   color: #444 !important;
+}
+.stream-item:hover .conversation-module li {
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 0.75em 0;
+}
+.stream-item:hover .conversation-module li:first-child {
+  margin-top: 0;
 }
 .avatar {
   -webkit-filter: grayscale(0.5);
@@ -328,13 +351,41 @@ a .tco-ellipsis {
   transition: opacity 0.1s ease-out;
 }
 /* New Tweets bar */
-.new-tweets-bar {
-  width: 20%;
-  margin-left: 40%;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  text-transform: uppercase;
+.new-tweets-bar,
+.new-tweets-bar:hover,
+.new-tweets-bar:focus,
+.new-tweets-bar:active {
+  display: block;
+  background: rgba(0,144,211,0.06);
 }
+
+.new-tweets-bar-visible {
+  opacity: 0.7;
+  position: relative;
+  top: -1rem;
+  line-height: 2rem;
+}
+
+.new-tweets-bar:hover,
+.new-tweets-bar:focus {
+  opacity: 0.8;
+}
+
+.new-tweets-bar:active {
+  opacity: 0.9;
+}
+
+
+
+.js-new-items-bar-container:focus,
+.js-new-items-bar-container:hover,
+.js-new-items-bar-container:active {
+  padding: 0;
+}
+
+
+
+
 /* Restyling indicator for end of tweet list */
 i.bird-etched {
   width: 16px;
@@ -365,7 +416,7 @@ i.bird-etched {
   background: #fff !important;
 }
 .front-welcome-text h1 {
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
   color: #888 !important;
   text-shadow: none;
   text-align: center;
@@ -379,7 +430,7 @@ i.bird-etched {
 .front-signin,
 .front-signup {
   background: #fafafa !important;
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
 }
 .btn {
   background: #fff !important;
@@ -388,16 +439,16 @@ i.bird-etched {
 }
 .btn,
 label {
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
 }
 .page-canvas,
 .content-narrow {
   border: 0 !important;
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
 }
 .page-canvas input,
 .content-narrow input {
-  font-family: 'Merriweather', Georgia, Baskerville, Times New Roman, serif !important;
+  font-family: Georgia, Baskerville, Times New Roman, serif !important;
 }
 #apps-stream {
   display: block !important;
